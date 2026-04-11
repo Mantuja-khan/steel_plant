@@ -17,7 +17,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Cinzel", "serif"],
+        heading: ["Gotham", "Montserrat", "sans-serif"],
         body: ["Poppins", "sans-serif"],
       },
       colors: {

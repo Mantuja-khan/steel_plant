@@ -46,22 +46,7 @@ const Infrastructure = () => (
           ))}
         </div>
 
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <ScrollFadeIn>
-            <div>
-              <h2 className="text-3xl font-heading mb-6 uppercase">Machineries and Manufacturing</h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Our factory is well-organized by various departments like Production, quality assurance, maintenance, stores, commercial, management & personnel. 
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                We house machines primarily imported from Italy and China, ensuring that our tube mill is well equipped with latest on line tube finishing equipments as per international standards.
-              </p>
-            </div>
-          </ScrollFadeIn>
-          <ScrollFadeIn delay={200}>
-            <img src={machineryImg} alt="Machinery" className="rounded-lg shadow-xl w-full h-80 object-cover" />
-          </ScrollFadeIn>
-        </div>
+
       </div>
     </section>
   </>

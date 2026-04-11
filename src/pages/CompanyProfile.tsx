@@ -18,19 +18,37 @@ const CompanyProfile = () => (
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <ScrollFadeIn>
           <div>
-            <h2 className="text-3xl font-heading mb-6 uppercase">Company Profile</h2>
+            <h2 className="text-3xl font-heading mb-6 uppercase">The O.P. Jindal Legacy</h2>
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed">
-                Established with a vision to change the Dynamics of the Stainless Steel Tube Industry in Ghaziabad U.P India, "JST INDUSTRIES" is managed by a team of technocrats with extensive experience in steel tube industry.
-              </p>
-              <p className="text-muted-foreground leading-relaxed font-semibold italic">
-                Our state-of-the-art plant & processes are ISO : 9001 : 2000 besides the mandatory quality certifications required to cater to such elite clients.
+                The O. P. Jindal Group is one of India’s most respected and diversified industrial groups, known for its strong presence in steel, power, mining, infrastructure, and manufacturing. Founded by visionary industrialist Om Prakash Jindal, the group has played a significant role in India’s industrial growth and infrastructure development for several decades.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                The Machines, Primarily Imported from Italy and China are housed in a very modern premises spread over a total area of 5,000 Sq. Mtr. The tube mill is well equipped with latest on line tube finishing equipments as per international italian standards and industrial requirement.
+                From its humble beginnings, the Jindal Group has grown into a global business powerhouse with operations across multiple countries and industries. The group’s companies are recognized for their commitment to innovation, quality manufacturing, and sustainable business practices.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Jst industries Private Limited, manufacturing stainless steel tubes and pipes, are committed towards continual improvement in our environmental and health & safety performance.
+              <div className="bg-slate-50 p-6 rounded-lg border-l-4 border-primary mt-8">
+                <h3 className="text-xl font-heading mb-4 text-primary uppercase font-bold">Leading Companies</h3>
+                <ul className="space-y-4">
+                  <li className="flex gap-3 items-start">
+                    <span className="font-bold text-primary min-w-[100px]">JSW Group</span>
+                    <span className="text-sm text-muted-foreground">A major player in steel, energy, cement, and infrastructure.</span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <span className="font-bold text-primary min-w-[100px]">JSPL</span>
+                    <span className="text-sm text-muted-foreground">Known for large-scale steel production and power generation.</span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <span className="font-bold text-primary min-w-[100px]">Stainless</span>
+                    <span className="text-sm text-muted-foreground">One of the largest stainless steel producers in India.</span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <span className="font-bold text-primary min-w-[100px]">Jindal SAW</span>
+                    <span className="text-sm text-muted-foreground">Global manufacturer of pipes and tubular products for energy and water transportation.</span>
+                  </li>
+                </ul>
+              </div>
+              <p className="text-muted-foreground leading-relaxed italic border-t pt-6">
+                Guided by the core values of integrity, innovation, and excellence, the Jindal Group continues to contribute to nation-building through advanced manufacturing, infrastructure development, and employment generation.
               </p>
             </div>
           </div>

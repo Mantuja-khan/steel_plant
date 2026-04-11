@@ -13,10 +13,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 20% 20%;
 
-    --primary: 199 89% 48%;
+    --primary: 215 100% 25%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 199 89% 38%;
+    --secondary: 215 100% 15%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 200 20% 95%;
@@ -34,12 +34,12 @@
 
     --radius: 0.5rem;
 
-    --surface-dark: 199 50% 20%;
+    --surface-dark: 215 100% 15%;
     --surface-dark-foreground: 0 0% 95%;
-    --surface-darker: 199 60% 12%;
+    --surface-darker: 215 100% 10%;
     --surface-darker-foreground: 0 0% 80%;
 
-    --hero-overlay: 199 60% 15%;
+    --hero-overlay: 215 100% 15%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -82,7 +82,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-bold tracking-wide;
+    @apply font-heading font-bold tracking-wide text-primary;
   }
 }
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
+import logo from "@/assets/logo.jpeg";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -8,6 +9,7 @@ const navLinks = [
   { to: "/infrastructure", label: "Infrastructure" },
   { to: "/application", label: "Application" },
   { to: "/quality-control", label: "Quality Control" },
+  { to: "/products", label: "Products" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -35,8 +37,11 @@ const Navbar = () => {
       {/* Main nav */}
       <nav className="bg-background shadow-lg border-b border-border">
         <div className="container mx-auto flex items-center justify-between px-4 py-3">
-          <Link to="/" className="font-heading text-xl md:text-2xl text-primary tracking-widest font-bold">
-            JINDAL<span className="text-secondary"> STEEL TUBE</span>
+          <Link to="/" className="flex items-center gap-3 group">
+            <img src={logo} alt="Jindal Steel" className="h-10 w-auto md:h-12" />
+            <div className="font-heading text-lg md:text-xl text-primary tracking-widest font-black uppercase italic">
+              JINDAL<span className="text-secondary"> STEEL TUBE</span>
+            </div>
           </Link>
 
           {/* Desktop links */}

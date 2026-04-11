@@ -9,16 +9,6 @@ const Application = () => (
   <>
     <PageBanner title="Application" subtitle="Industry Solutions" />
 
-    <section className="section-padding">
-      <div className="container mx-auto px-4">
-        <ScrollFadeIn>
-          <h2 className="text-3xl font-heading mb-4">Our Presence</h2>
-          <p className="text-muted-foreground leading-relaxed mb-6">
-            JST Industries Pvt. Ltd. is a trusted and recognized name in the stainless steel industry. We are acknowledged as one of the most reputed Stainless Steel Tubes & Pipes Coil exporters in the global market. Our Technically advanced and brilliantly designed stainless tubes and pipes in various grades.
-          </p>
-        </ScrollFadeIn>
-      </div>
-    </section>
 
     {/* Specifications Covered */}
     <section className="section-padding bg-muted/40">
@@ -29,7 +19,7 @@ const Application = () => (
             Our stainless steel tubes and pipes are manufactured in compliance with international standards to ensure superior quality and performance.
           </p>
         </ScrollFadeIn>
-        
+
         <div className="space-y-4 text-muted-foreground leading-relaxed max-w-4xl mx-auto">
           <p><strong>ASTM A 213 / A213M (2010):</strong> Seamless ferritic and austenitic alloy-steel tubes for boilers, superheaters, and heat exchangers.</p>
           <p><strong>ASTM A 249 / A249M (2010):</strong> Seamless and welded ferritic tubes for heat exchangers, condensers, and superheaters.</p>

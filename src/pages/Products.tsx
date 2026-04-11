@@ -1,72 +1,67 @@
 import { useParams, Link } from "react-router-dom";
 import PageBanner from "@/components/PageBanner";
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import productsImg from "@/assets/products-steel.jpg";
-import machineryImg from "@/assets/machinery.jpg";
-import qualityImg from "@/assets/quality-control.jpg";
-import applicationImg from "@/assets/application-steel.jpg";
+import chaukhat1 from "@/assets/chaukhat1.png";
+import chaukhat2 from "@/assets/chaukhat2.png";
+import chaukhat3 from "@/assets/chaukhat3.png";
+import chaukhat4 from "@/assets/chaukhat4.png";
+import roofingSheets from "@/assets/roofing-sheets.png";
+import chaukathGalvanised from "@/assets/chaukath-galvanised.png";
+import steelDetail from "@/assets/steel-detail.png";
+import { useState, useEffect } from "react";
+import roofing1 from "../assets/roofing1.jpg"
+import roofing2 from "../assets/roofing2.png"
+import roofing3 from "../assets/roofing3.png"
+import roofing4 from "../assets/roofing4.png"
 
 const allProducts = [
   {
-    slug: "hot-rolled-steel",
-    title: "Hot Rolled Steel",
-    shortDesc: "High-quality HR coils and sheets for structural applications.",
-    image: productsImg,
+    slug: "colour-coated-chaukath",
+    title: "Colour Coated Chaukath",
+    shortDesc: "Vibrant and durable pre-painted steel door frames.",
+    image: chaukhat1,
+    gallery: [chaukhat1, chaukhat2, chaukhat3, chaukhat4],
     description:
-      "Hot Rolled Steel is produced at high temperatures (above 1700°F) making it easier to form and resulting in products that are easier to work with. Our HR steel products include coils, sheets, plates, and structural sections suitable for construction, shipbuilding, and heavy engineering applications.",
+      "Our Colour Coated Chaukath segments are manufactured using high-grade pre-painted steel, providing an excellent aesthetic appeal along with superior protection against environmental elements. These frames are available in a variety of RAL shades to match your architectural vision.",
     specs: [
-      "Thickness: 1.2mm – 25mm",
-      "Width: 900mm – 2000mm",
-      "Grade: IS 2062, ASTM A36, SS400, Q235",
-      "Surface: Pickled & Oiled / Mill Finish",
+      "Material: PPGI / PPGL",
+      "Coating Thickness: 20-25 Microns",
+      "Colors: Multiple RAL Shades",
+      "Base Metal: Cold Rolled / Galvanized",
     ],
-    applications: ["Structural steel fabrication", "Pipe & tube manufacturing", "Automotive chassis", "Heavy machinery parts"],
+    applications: ["Designer Homes", "Office Interiors", "Retail Outlets"],
   },
   {
-    slug: "cold-rolled-steel",
-    title: "Cold Rolled Steel",
-    shortDesc: "Precision CR steel with superior surface finish.",
-    image: machineryImg,
+    slug: "colour-coated-roofing-sheets",
+    title: "Colour Coated Roofing Sheets",
+    shortDesc: "High-strength, aesthetic roofing solutions.",
+    image: roofing1,
+    gallery: [roofing1, roofing2, roofing3, roofing4],
     description:
-      "Cold Rolled Steel is processed at room temperature, resulting in a product with tighter tolerances, better surface finish, and increased strength compared to hot rolled steel. Ideal for applications where precision and appearance matter.",
+      "Premium Colour Coated Roofing Sheets designed for longevity and style. These sheets offer excellent thermal insulation and are treated with multiple layers of protective coatings to prevent chipping and fading even in extreme weather conditions.",
     specs: [
-      "Thickness: 0.15mm – 3.0mm",
-      "Width: 600mm – 1500mm",
-      "Grade: SPCC, DC01, DC03, DC04",
-      "Surface: Bright Annealed / Skin Pass",
+      "Thickness: 0.35mm - 0.80mm",
+      "Profile: Corrugated / Trapezoidal",
+      "Zinc Coating: 90 - 120 GSM",
+      "Paint Type: Regular Modified Polyester (RMP)",
     ],
-    applications: ["Automotive body panels", "Home appliances", "Furniture", "Electrical enclosures"],
+    applications: ["Industrial Sheds", "Residential Roofing", "Warehouses"],
   },
   {
-    slug: "galvanized-steel",
-    title: "Galvanized Steel",
-    shortDesc: "Corrosion-resistant GI sheets and coils.",
-    image: qualityImg,
+    slug: "galvanised-plain-skin-pass-chaukath",
+    title: "GALVANISED PLAIN SKIN PASS CHAUKAT",
+    shortDesc: "Precision-engineered plain galvanized steel frames.",
+    image: chaukathGalvanised,
+    gallery: [chaukathGalvanised, steelDetail, roofingSheets],
     description:
-      "Galvanized steel is coated with a layer of zinc to protect against corrosion, making it ideal for outdoor and humid environments. We supply both hot-dip galvanized and electro-galvanized steel in various forms.",
+      "The Galvanised Plain Skin Pass Chaukath is known for its high precision and smooth surface finish. The skin pass process ensures improved flatness and superior paint adhesion, making it the ideal choice for high-end construction requirements where quality is paramount.",
     specs: [
-      "Thickness: 0.12mm – 4.0mm",
-      "Width: 600mm – 1500mm",
-      "Zinc Coating: 60 – 275 g/m²",
-      "Grade: DX51D, SGCC, SGH340",
+      "Material: Galvanized Plain (GP)",
+      "Process: Skin Pass Mill Finished",
+      "Surface: Extra Smooth / Zero Spangle",
+      "Durability: High Corrosion Resistance",
     ],
-    applications: ["Roofing & cladding", "HVAC ducting", "Guard rails", "Agricultural equipment"],
-  },
-  {
-    slug: "coated-steel",
-    title: "Coated Steel",
-    shortDesc: "Color coated and pre-painted steel products.",
-    image: applicationImg,
-    description:
-      "Coated steel products include pre-painted galvanized steel (PPGI) and pre-painted galvalume steel (PPGL). These products combine the structural strength of steel with aesthetic appeal and enhanced corrosion resistance.",
-    specs: [
-      "Thickness: 0.14mm – 1.2mm",
-      "Width: 600mm – 1250mm",
-      "Coating: Polyester, SMP, PVDF, HDP",
-      "Colors: RAL standard & custom colors",
-    ],
-    applications: ["Roofing & wall panels", "Sandwich panels", "Signage & displays", "Interior decoration"],
+    applications: ["Luxury Housing", "Public Infrastructure", "Commercial Complexes"],
   },
 ];
 
@@ -75,10 +70,6 @@ const ProductsList = () => (
     <PageBanner title="Our Products" subtitle="Premium Steel Solutions" />
     <section className="section-padding">
       <div className="container mx-auto px-4">
-        <h2 className="section-title">Product Range</h2>
-        <p className="section-subtitle">
-          Explore our comprehensive range of iron and steel products designed to meet diverse industrial needs.
-        </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {allProducts.map((p) => (
             <div key={p.slug} className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow group">
@@ -103,6 +94,17 @@ const ProductsList = () => (
 const ProductDetail = () => {
   const { slug } = useParams();
   const product = allProducts.find((p) => p.slug === slug);
+  const [currentImgIndex, setCurrentImgIndex] = useState(0);
+
+  useEffect(() => {
+    if (!product || !product.gallery || product.gallery.length <= 1) return;
+
+    const interval = setInterval(() => {
+      setCurrentImgIndex((prev) => (prev + 1) % (product.gallery?.length || 1));
+    }, 2000); // Change every 2 seconds
+
+    return () => clearInterval(interval);
+  }, [product]);
 
   if (!product) {
     return (
@@ -116,55 +118,46 @@ const ProductDetail = () => {
     );
   }
 
+  const displayImages = product.gallery && product.gallery.length > 0 ? product.gallery : [product.image];
+
   return (
     <>
       <PageBanner title={product.title} subtitle="Product Details" />
       <section className="section-padding">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-            <img src={product.image} alt={product.title} className="rounded-lg w-full h-80 object-cover shadow-lg" />
-            <div>
-              <h2 className="text-3xl font-heading mb-4">{product.title}</h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">{product.description}</p>
-              <Link to="/enquiry" className="inline-flex items-center group relative text-primary font-heading tracking-wider uppercase text-sm font-bold pb-1 mt-4">
-                <span>Send Enquiry</span>
-                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
-            <div className="bg-card border border-border rounded-lg p-8">
-              <h3 className="text-xl font-heading mb-4">Specifications</h3>
-              <ul className="space-y-3">
-                {product.specs.map((s) => (
-                  <li key={s} className="flex items-start gap-3 text-sm">
-                    <span className="w-2 h-2 rounded-full bg-primary mt-1.5 shrink-0" />
-                    {s}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-card border border-border rounded-lg p-8">
-              <h3 className="text-xl font-heading mb-4">Applications</h3>
-              <ul className="space-y-3">
-                {product.applications.map((a) => (
-                  <li key={a} className="flex items-start gap-3 text-sm">
-                    <span className="w-2 h-2 rounded-full bg-primary mt-1.5 shrink-0" />
-                    {a}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
+          <div className="mb-8">
             <Link to="/products" className="inline-flex items-center group relative text-primary font-heading tracking-wider uppercase text-sm font-bold pb-1">
               <span>← Back to All Products</span>
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <div className="relative md:h-[500px] flex items-center justify-center">
+              <img
+                src={displayImages[currentImgIndex]}
+                alt={`${product.title} - view ${currentImgIndex + 1}`}
+                className="max-w-full max-h-full object-contain transition-none" // just the image
+              />
+            </div>
+            <div className="py-4">
+              <h2 className="text-3xl md:text-4xl font-heading mb-4 uppercase text-primary font-black italic">{product.title}</h2>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-6">{product.description}</p>
+
+              <div className="mt-8">
+                <h3 className="text-xl font-heading mb-4 text-primary uppercase font-bold border-b border-primary/20 pb-2">Specifications</h3>
+                <ul className="grid grid-cols-1 gap-4">
+                  {product.specs.map((s) => (
+                    <li key={s} className="flex items-start gap-4 text-sm md:text-base">
+                      <span className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0" />
+                      <span className="font-medium text-foreground">{s}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
         </div>
       </section>
     </>

@@ -9,9 +9,10 @@ import machineryImg from "@/assets/machinery.jpg";
 import qualityImg from "@/assets/quality-control.jpg";
 import applicationImg from "@/assets/application-steel.jpg";
 import companyImg from "@/assets/company-building.jpg";
+import home1 from "../assets/home1.png"
+import chaukhat1 from "../assets/chaukhat1.png"
 
-const heroImages = [heroImg, machineryImg, qualityImg, applicationImg];
-
+const heroImages = [home1, chaukhat1, qualityImg];
 const testingFacilities = [
   "Muffle Furnace",
   "Hydrotesting",
@@ -39,54 +40,87 @@ const Index = () => {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[85vh] min-h-[500px] flex items-center overflow-hidden">
-        <AnimatePresence mode="wait">
-          <motion.img
-            key={currentImage}
-            src={heroImages[currentImage]}
-            alt="Steel manufacturing"
-            initial={{ x: "100%", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: "-100%", opacity: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </AnimatePresence>
-        <div className="absolute inset-0 hero-gradient" />
-        <div className="relative container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-2xl"
-          >
-            <p className="text-accent font-heading text-lg tracking-widest mb-2 uppercase">Welcome to</p>
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-heading text-primary-foreground leading-tight uppercase font-bold">
-              Jindal Steel Tube
-            </h1>
-            <p className="mt-4 text-primary-foreground/80 text-lg max-w-lg">
-              We are the premier manufacturers of high-quality stainless steel tubes and pipes, serving industries worldwide.
-            </p>
-            <Link to="/company-profile" className="inline-flex items-center group relative text-accent font-heading tracking-wider uppercase text-sm font-bold mt-6 pb-1">
-              <span>Explore More</span>
-              <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-          </motion.div>
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-slate-50">
+        <div className="container mx-auto px-4 py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Right side: Animated Image Slider (on top for small screens) */}
+            <div className="relative h-[300px] sm:h-[400px] overflow-hidden rounded-2xl order-1 lg:order-2">
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={currentImage}
+                  src={heroImages[currentImage]}
+                  alt="Steel manufacturing"
+                  initial={{ x: "100%", opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: "-100%", opacity: 0 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                  className="absolute inset-0 w-full h-full object-contain p-4"
+                />
+              </AnimatePresence>
+
+              {/* Slider Dots inside the image container */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                {heroImages.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setCurrentImage(i)}
+                    className={`w-2.5 h-2.5 rounded-full transition-all ${i === currentImage ? "bg-primary w-8" : "bg-primary/20 hover:bg-primary/40"
+                      }`}
+                    aria-label={`Go to slide ${i + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Left side: Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="max-w-2xl order-2 lg:order-1"
+            >
+              <p className="text-secondary font-heading text-lg tracking-widest mb-4 uppercase font-bold">Welcome to</p>
+              <h1 className="text-5xl sm:text-6xl md:text-8xl font-heading text-primary leading-tight uppercase font-black italic tracking-tighter mb-6">
+                JINDAL <br /> <span className="text-secondary underline decoration-secondary/30 underline-offset-8">STEEL TUBE</span>
+              </h1>
+              <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+                Jindal Steel Tubes are made from high-grade materials, offering superior strength, corrosion resistance, and modern aesthetics for industrial excellence.
+              </p>
+              <Link to="/company-profile" className="inline-flex items-center group relative text-primary font-heading tracking-wider uppercase text-sm font-bold pb-2">
+                <span>Explore More</span>
+                <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-2" />
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+            </motion.div>
+          </div>
         </div>
-        
-        {/* Slider Indicators */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
-          {heroImages.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrentImage(i)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                i === currentImage ? "bg-accent w-8" : "bg-primary-foreground/30 hover:bg-primary-foreground/50"
-              }`}
-              aria-label={`Go to slide ${i + 1}`}
-            />
-          ))}
+      </section>
+      {/* Key Features */}
+      <section className="bg-white py-16 border-b border-border">
+        <div className="container mx-auto px-4">
+          <ScrollFadeIn>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-heading mb-4 uppercase">Key Features</h2>
+              <div className="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+          </ScrollFadeIn>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+            {[
+              { title: "Rust-resistant", desc: "Premium PPGI coating" },
+              { title: "Strong & Durable", desc: "High-grade steel construction" },
+              { title: "Smooth Finish", desc: "Attractive & modern design" },
+              { title: "Low Maintenance", desc: "Long-lasting & cost-effective" },
+              { title: "Versatile Use", desc: "Ideal for doors and windows" },
+            ].map((feature, i) => (
+              <ScrollFadeIn key={i} delay={i * 100}>
+                <div className="text-center p-6 rounded-lg bg-card border border-border hover:shadow-md transition-shadow">
+                  <CheckCircle className="w-8 h-8 text-primary mx-auto mb-4" />
+                  <h3 className="font-heading font-bold mb-2 uppercase text-sm">{feature.title}</h3>
+                  <p className="text-xs text-muted-foreground">{feature.desc}</p>
+                </div>
+              </ScrollFadeIn>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -99,13 +133,13 @@ const Index = () => {
           <ScrollFadeIn delay={200}>
             <div>
               <h2 className="text-3xl md:text-4xl font-heading text-accent-foreground mb-4 uppercase">
-                About JST INDUSTRIES
+                About O.P. JINDAL GROUP
               </h2>
               <p className="text-accent-foreground/80 leading-relaxed mb-6">
-                Established with a vision to change the Dynamics of the Stainless Steel Tube Industry in Ghaziabad U.P India, "JST INDUSTRIES" is managed by a team of technocrats with extensive experience in steel tube industry.
+                The O. P. Jindal Group is one of India’s most respected and diversified industrial groups, known for its strong presence in steel, power, mining, infrastructure, and manufacturing. Founded by visionary industrialist Om Prakash Jindal, the group has played a significant role in India’s industrial growth and infrastructure development for several decades.
               </p>
-              <p className="text-accent-foreground/80 leading-relaxed mb-6 italic">
-                Our state-of-the-art plant & processes are <strong>ISO : 9001 : 2000</strong> besides the mandatory quality certifications required to cater to such elite clients.
+              <p className="text-accent-foreground/80 leading-relaxed mb-6">
+                From its humble beginnings, the Jindal Group has grown into a global business powerhouse with operations across multiple countries and industries, recognized for its commitment to innovation, quality manufacturing, and sustainable business practices.
               </p>
               <Link to="/company-profile" className="inline-flex items-center group relative text-primary font-heading tracking-wider uppercase text-sm font-bold pb-1">
                 <span>Read More</span>

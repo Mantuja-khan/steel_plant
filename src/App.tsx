@@ -11,6 +11,7 @@ import Application from "./pages/Application";
 import QualityControl from "./pages/QualityControl";
 import Enquiry from "./pages/Enquiry";
 import Contact from "./pages/Contact";
+import { ProductsList, ProductDetail } from "./pages/Products";
 
 import NotFound from "./pages/NotFound";
 
@@ -31,6 +32,8 @@ const App = () => (
             <Route path="/quality-control" element={<QualityControl />} />
             <Route path="/enquiry" element={<Enquiry />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/products" element={<ProductsList />} />
+            <Route path="/products/:slug" element={<ProductDetail />} />
 
 
           </Route>
