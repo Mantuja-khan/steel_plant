@@ -3,8 +3,8 @@ import ScrollFadeIn from "@/components/ScrollFadeIn";
 import { Phone, Mail, MapPin, Clock, Globe, Send } from "lucide-react";
 
 const contactInfo = [
-  { icon: MapPin, title: "Address", lines: ["Ghaziabad", "Uttar Pradesh, India"] },
-  { icon: Phone, title: "Phone", lines: ["+91 98765 43210"] },
+  { icon: MapPin, title: "Address", lines: ["Delhi", "India"] },
+  { icon: Phone, title: "Phone", lines: ["+91-9999404852"] },
   { icon: Mail, title: "Email", lines: ["info@jindalsteeltube.com"] },
   { icon: Clock, title: "Working Hours", lines: ["Mon - Sat: 9:00 AM - 6:00 PM", "Sunday: Closed"] },
 ];
@@ -62,7 +62,7 @@ const Contact = () => (
                   </div>
                   <div>
                     <p className="font-semibold text-sm mb-1 uppercase tracking-wide">Registered Office</p>
-                    <p className="text-sm text-muted-foreground">Ghaziabad, Uttar Pradesh, India</p>
+                    <p className="text-sm text-muted-foreground">Delhi, India</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -71,7 +71,7 @@ const Contact = () => (
                   </div>
                   <div>
                     <p className="font-semibold text-sm mb-1 uppercase tracking-wide">Call Us</p>
-                    <p className="text-sm text-muted-foreground">+91 98765 43210</p>
+                    <p className="text-sm text-muted-foreground">+91-9999404852</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

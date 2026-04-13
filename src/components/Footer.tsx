@@ -34,15 +34,15 @@ const Footer = () => (
       </div>
 
       <div>
-        <h3 className="text-lg mb-4 text-primary-foreground/90 font-heading">CONTACT INFO</h3>
+        <h3 className="text-lg mb-4 text-primary-foreground/90 font-heading">OUR MEETING POINT</h3>
         <ul className="space-y-3 text-sm">
           <li className="flex items-start gap-2">
             <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-primary-foreground/70" />
-            123 Industrial Area, Steel City, India
+            Delhi
           </li>
           <li className="flex items-center gap-2">
             <Phone className="w-4 h-4 shrink-0 text-primary-foreground/70" />
-            +91 98765 43210
+            +91-9999404852
           </li>
           <li className="flex items-center gap-2">
             <Mail className="w-4 h-4 shrink-0 text-primary-foreground/70" />

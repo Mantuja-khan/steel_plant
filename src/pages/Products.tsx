@@ -6,14 +6,15 @@ import chaukhat2 from "@/assets/chaukhat2.png";
 import chaukhat3 from "@/assets/chaukhat3.png";
 import chaukhat4 from "@/assets/chaukhat4.png";
 import roofingSheets from "@/assets/roofing-sheets.png";
-import chaukathGalvanised from "@/assets/chaukath-galvanised.png";
+import chaukathGalvanised from "@/assets/3rdimg1.jpeg";
 import steelDetail from "@/assets/steel-detail.png";
+import img3rd_2 from "@/assets/3rdimg2.jpeg";
+import img3rd_4 from "@/assets/3rdimg4.jpeg";
 import { useState, useEffect } from "react";
 import roofing1 from "../assets/roofing1.jpg"
 import roofing2 from "../assets/roofing2.png"
 import roofing3 from "../assets/roofing3.png"
 import roofing4 from "../assets/roofing4.png"
-
 const allProducts = [
   {
     slug: "colour-coated-chaukath",
@@ -52,7 +53,7 @@ const allProducts = [
     title: "GALVANISED PLAIN SKIN PASS CHAUKAT",
     shortDesc: "Precision-engineered plain galvanized steel frames.",
     image: chaukathGalvanised,
-    gallery: [chaukathGalvanised, steelDetail, roofingSheets],
+    gallery: [chaukathGalvanised, img3rd_2, img3rd_4],
     description:
       "The Galvanised Plain Skin Pass Chaukath is known for its high precision and smooth surface finish. The skin pass process ensures improved flatness and superior paint adhesion, making it the ideal choice for high-end construction requirements where quality is paramount.",
     specs: [

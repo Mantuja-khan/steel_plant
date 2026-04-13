@@ -1,7 +1,7 @@
 import PageBanner from "@/components/PageBanner";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import { CheckCircle } from "lucide-react";
-import qualityImg from "@/assets/quality-control.jpg";
+import qualityImg from "@/assets/newquality.jpg";
 
 
 const QualityControl = () => (
@@ -34,7 +34,7 @@ const QualityControl = () => (
           </div>
         </ScrollFadeIn>
         <ScrollFadeIn delay={200}>
-          <img src={qualityImg} alt="Quality control testing" loading="lazy" width={640} height={400} className="rounded-lg w-full h-96 object-cover shadow-lg" />
+          <img src={qualityImg} alt="Quality control testing" loading="lazy" width={640} height={400} className="rounded-lg w-full h-[500px] object-contain bg-white shadow-lg" />
         </ScrollFadeIn>
       </div>
     </section>

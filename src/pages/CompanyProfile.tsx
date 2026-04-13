@@ -1,7 +1,7 @@
 import PageBanner from "@/components/PageBanner";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import { Target, Eye, Award, Users } from "lucide-react";
-import companyImg from "@/assets/company-building.jpg";
+import companyImg from "@/assets/home2.png";
 
 const values = [
   { icon: Target, title: "Our Mission", desc: "To manufacture and deliver superior quality stainless steel tubes with focus on environmental and health & safety performance." },
@@ -54,7 +54,7 @@ const CompanyProfile = () => (
           </div>
         </ScrollFadeIn>
         <ScrollFadeIn delay={200}>
-          <img src={companyImg} alt="Company headquarters" loading="lazy" width={640} height={400} className="rounded-lg w-full h-80 object-cover shadow-lg" />
+          <img src={companyImg} alt="Company headquarters" loading="lazy" width={640} height={400} className="rounded-lg w-full h-96 object-contain bg-white shadow-lg" />
         </ScrollFadeIn>
       </div>
     </section>

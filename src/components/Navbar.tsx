@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="container mx-auto flex justify-between items-center py-2 px-4">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1">
-              <Phone className="w-3 h-3" /> +91 98765 43210
+              <Phone className="w-3 h-3" /> +91-9999404852
             </span>
             <span className="hidden sm:flex items-center gap-1">
               <Mail className="w-3 h-3" /> info@jindalsteeltube.com
@@ -50,11 +50,10 @@ const Navbar = () => {
               <li key={l.to}>
                 <Link
                   to={l.to}
-                  className={`px-3 py-2 text-xs font-semibold uppercase tracking-wide transition-colors rounded ${
-                    location.pathname === l.to
+                  className={`px-3 py-2 text-xs font-semibold uppercase tracking-wide transition-colors rounded ${location.pathname === l.to
                       ? "bg-primary text-primary-foreground"
                       : "text-foreground hover:bg-primary hover:text-primary-foreground"
-                  }`}
+                    }`}
                 >
                   {l.label}
                 </Link>
@@ -80,11 +79,10 @@ const Navbar = () => {
                 <Link
                   to={l.to}
                   onClick={() => setOpen(false)}
-                  className={`block py-2 text-sm font-semibold uppercase tracking-wide ${
-                    location.pathname === l.to
+                  className={`block py-2 text-sm font-semibold uppercase tracking-wide ${location.pathname === l.to
                       ? "text-primary"
                       : "text-foreground"
-                  }`}
+                    }`}
                 >
                   {l.label}
                 </Link>
