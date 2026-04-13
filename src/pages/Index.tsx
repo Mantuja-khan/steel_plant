@@ -193,7 +193,7 @@ const Index = () => {
             </div>
           </ScrollFadeIn>
           <ScrollFadeIn delay={200}>
-            <img src={applicationImg} alt="Steel applications" loading="lazy" width={640} height={360} className="rounded-lg w-full h-72 object-cover shadow-lg" />
+            <img src={applicationImg} alt="Steel applications" loading="lazy" width={640} height={360} className="rounded-lg w-full h-[400px] md:h-[500px] object-contain bg-white shadow-lg mx-auto" />
           </ScrollFadeIn>
         </div>
       </section>
@@ -235,11 +235,6 @@ const Index = () => {
           {/* Machinery Slider */}
 
           <div className="overflow-hidden relative py-8 border-y border-border/50">
-            <Link to="/products">
-              <Button variant="outline" size="sm" className="font-heading uppercase text-[10px] sm:text-xs tracking-wider border-primary text-primary hover:bg-primary hover:text-white transition-all">
-                View Products
-              </Button>
-            </Link>
             <motion.div
               className="flex gap-8 items-center"
               animate={{
