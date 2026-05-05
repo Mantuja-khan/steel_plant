@@ -6,44 +6,47 @@ import chaukhat2 from "@/assets/chaukhat2.png";
 import chaukhat3 from "@/assets/chaukhat3.png";
 import chaukhat4 from "@/assets/chaukhat4.png";
 import roofingSheets from "@/assets/roofing-sheets.png";
-import chaukathGalvanised from "@/assets/3rdimg1.jpeg";
+import chaukathGalvanised from "@/assets/chaukath-galvanised.png";
 import steelDetail from "@/assets/steel-detail.png";
 import img3rd_2 from "@/assets/3rdimg2.jpeg";
 import img3rd_4 from "@/assets/3rdimg4.jpeg";
 import { useState, useEffect } from "react";
-import roofing1 from "../assets/roofing1.jpg"
+import roofing1 from "../assets/roofing1.jpeg"
 import roofing2 from "../assets/roofing2.png"
 import roofing3 from "../assets/roofing3.png"
+import colorCoatedSlitCoils from "../assets/color_coated_slit_coils.jpeg"
+import colorCoatedSlitCoils1 from "../assets/color_coated_slit_coils1.jpeg"
 import roofing4 from "../assets/roofing4.png"
 const allProducts = [
   {
     slug: "colour-coated-chaukath",
-    title: "Colour Coated Chaukath",
+    title: "COLOR COATED CHAUKATH",
     shortDesc: "Vibrant and durable pre-painted steel door frames.",
     image: chaukhat1,
     gallery: [chaukhat1, chaukhat2, chaukhat3, chaukhat4],
     description:
       "Our Colour Coated Chaukath segments are manufactured using high-grade pre-painted steel, providing an excellent aesthetic appeal along with superior protection against environmental elements. These frames are available in a variety of RAL shades to match your architectural vision.",
     specs: [
-      "Material: PPGI / PPGL",
-      "Coating Thickness: 20-25 Microns",
+      "Material: PPGI ",
+      "Coating: 120/275GSM",
+      " Thickness: 0.80-2.00mm",
       "Colors: Multiple RAL Shades",
-      "Base Metal: Cold Rolled / Galvanized",
+      "Application: Advance Paint Technology"
     ],
     applications: ["Designer Homes", "Office Interiors", "Retail Outlets"],
   },
   {
     slug: "colour-coated-roofing-sheets",
-    title: "Colour Coated Roofing Sheets",
+    title: "COLOR COATED ROOFING SHEETS",
     shortDesc: "High-strength, aesthetic roofing solutions.",
-    image: roofing1,
-    gallery: [roofing1, roofing2, roofing3, roofing4],
+    image: roofingSheets,
+    gallery: [roofingSheets, roofing1, roofing2, roofing3, roofing4,],
     description:
       "Premium Colour Coated Roofing Sheets designed for longevity and style. These sheets offer excellent thermal insulation and are treated with multiple layers of protective coatings to prevent chipping and fading even in extreme weather conditions.",
     specs: [
-      "Thickness: 0.35mm - 0.80mm",
+      "Thickness: 0.30mm - 0.80mm",
       "Profile: Corrugated / Trapezoidal",
-      "Zinc Coating: 90 - 120 GSM",
+      "Zinc Coating: 90 - 200 GSM",
       "Paint Type: Regular Modified Polyester (RMP)",
     ],
     applications: ["Industrial Sheds", "Residential Roofing", "Warehouses"],
@@ -64,6 +67,22 @@ const allProducts = [
     ],
     applications: ["Luxury Housing", "Public Infrastructure", "Commercial Complexes"],
   },
+  {
+    slug: "color-coated-slit-coils",
+    title: "COLOR COATED SLIT COILS",
+    shortDesc: "Colour coated slit coils are precision-cut steel coils",
+    image: colorCoatedSlitCoils,
+    gallery: [colorCoatedSlitCoils, colorCoatedSlitCoils1],
+    description:
+      "Colour coated slit coils are precision-cut steel coils manufactured from high-quality pre-painted galvanized (PPGI) or pre-painted galvalume (PPGL) steel. Designed for durability, flexibility, and aesthetic appeal, these coils are widely used in roofing accessories, door frames, fabrication, cladding, and industrial applications",
+    specs: [
+      "Material: Galvanized Plain (GP)",
+      "Process: Skin Pass Mill Finished",
+      "Surface: Extra Smooth",
+      "Durability: High Corrosion Resistance",
+    ],
+    applications: ["Color Coated Steel Strips", "Roofing", "Cladding"],
+  },
 ];
 
 const ProductsList = () => (
@@ -71,17 +90,28 @@ const ProductsList = () => (
     <PageBanner title="Our Products" subtitle="Premium Steel Solutions" />
     <section className="section-padding">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {allProducts.map((p) => (
-            <div key={p.slug} className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow group">
-              <img src={p.image} alt={p.title} loading="lazy" width={400} height={250} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="p-5">
-                <h3 className="text-lg font-heading mb-2">{p.title}</h3>
-                <p className="text-sm text-muted-foreground mb-3">{p.shortDesc}</p>
-                <Link to={`/products/${p.slug}`} className="inline-flex items-center group relative text-primary font-heading tracking-wider uppercase text-xs font-bold pb-1">
-                  <span>View Details</span>
-                  <ArrowRight className="w-3 h-3 ml-1 transition-transform group-hover:translate-x-1" />
-                  <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+            <div key={p.slug} className="bg-card border border-border rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500 group flex flex-col h-full">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-heading font-bold mb-3 uppercase tracking-tighter italic text-primary leading-tight h-14 overflow-hidden line-clamp-2">
+                  {p.title}
+                </h3>
+                <p className="text-sm text-muted-foreground mb-6 line-clamp-3 flex-grow">
+                  {p.shortDesc}
+                </p>
+                <Link to={`/products/${p.slug}`} className="inline-flex items-center group relative text-primary font-heading tracking-wider uppercase text-xs font-black italic pb-1 w-fit">
+                  <span>View Product Details</span>
+                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-2" />
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </div>
             </div>

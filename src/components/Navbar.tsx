@@ -10,6 +10,7 @@ const navLinks = [
   { to: "/application", label: "Application" },
   { to: "/quality-control", label: "Quality Control" },
   { to: "/products", label: "Products" },
+  { to: "/gallery", label: "Gallery" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -24,10 +25,10 @@ const Navbar = () => {
         <div className="container mx-auto flex justify-between items-center py-2 px-4">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1">
-              <Phone className="w-3 h-3" /> +91-9999404852
+              <Phone className="w-3 h-3" /> +91-9664119210
             </span>
             <span className="hidden sm:flex items-center gap-1">
-              <Mail className="w-3 h-3" /> info@jindalsteeltube.com
+              <Mail className="w-3 h-3" /> akash.1401m@gmail.com
             </span>
           </div>
           <span className="hidden md:block">Mon - Sat: 9:00 AM - 6:00 PM</span>

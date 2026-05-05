@@ -1,7 +1,7 @@
 import PageBanner from "@/components/PageBanner";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import { Target, Eye, Award, Users } from "lucide-react";
-import companyImg from "@/assets/home2.png";
+import AboutSlider from "@/components/AboutSlider";
 
 const values = [
   { icon: Target, title: "Our Mission", desc: "To manufacture and deliver superior quality stainless steel tubes with focus on environmental and health & safety performance." },
@@ -18,43 +18,25 @@ const CompanyProfile = () => (
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <ScrollFadeIn>
           <div>
-            <h2 className="text-3xl font-heading mb-6 uppercase">The O.P. Jindal Legacy</h2>
+            <h2 className="text-3xl font-heading mb-6 uppercase">The D.S. Jindal Legacy</h2>
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed">
-                The O. P. Jindal Group is one of India’s most respected and diversified industrial groups, known for its strong presence in steel, power, mining, infrastructure, and manufacturing. Founded by visionary industrialist Om Prakash Jindal, the group has played a significant role in India’s industrial growth and infrastructure development for several decades.
+                With a legacy spanning over 50 years, Group DS JINDAL is dedicated to driving innovation and advancing the Indian economy. Founded by Late Padam Shri Debi Sahai Jindal, the visionary behind the renowned JINDAL Group, our commitment to excellence ensures that every product exceeds industry standards.
+
+                We specialize in a range of sectors, including innovative plumbing solutions with products like MLC Pipes and Silent PP Pipes, traditional plastic plumbing with PVC Pipes, GFRP rebars for construction, education to foster knowledge and growth, and steel tubes for industrial applications.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                From its humble beginnings, the Jindal Group has grown into a global business powerhouse with operations across multiple countries and industries. The group’s companies are recognized for their commitment to innovation, quality manufacturing, and sustainable business practices.
+                At DS JINDAL Group, quality is our top priority. We ensure that all our products meet the highest standards, providing reliable, durable, and innovative solutions. As a leader in the industry, we continue to build on our legacy, offering trusted solutions for businesses across India and beyond.Jindal Tubes, part of the DS Jindal Group, is a leader in India’s plumbing pipe industry. Built on innovation and reliability, we introduced Multi-Layer Composite Pipes to the market and are now expanding with Silent PP Drainage Pipes, setting new benchmarks in quality and performance.
+
+                More than products, our strength lies in engineering excellence and long-term partnerships. With strong foundations and a clear vision, Jindal Tubes is shaping the future of plumbing solutions for India’s growth.
               </p>
-              <div className="bg-slate-50 p-6 rounded-lg border-l-4 border-primary mt-8">
-                <h3 className="text-xl font-heading mb-4 text-primary uppercase font-bold">Leading Companies</h3>
-                <ul className="space-y-4">
-                  <li className="flex gap-3 items-start">
-                    <span className="font-bold text-primary min-w-[100px]">JSW Group</span>
-                    <span className="text-sm text-muted-foreground">A major player in steel, energy, cement, and infrastructure.</span>
-                  </li>
-                  <li className="flex gap-3 items-start">
-                    <span className="font-bold text-primary min-w-[100px]">JSPL</span>
-                    <span className="text-sm text-muted-foreground">Known for large-scale steel production and power generation.</span>
-                  </li>
-                  <li className="flex gap-3 items-start">
-                    <span className="font-bold text-primary min-w-[100px]">Stainless</span>
-                    <span className="text-sm text-muted-foreground">One of the largest stainless steel producers in India.</span>
-                  </li>
-                  <li className="flex gap-3 items-start">
-                    <span className="font-bold text-primary min-w-[100px]">Jindal SAW</span>
-                    <span className="text-sm text-muted-foreground">Global manufacturer of pipes and tubular products for energy and water transportation.</span>
-                  </li>
-                </ul>
-              </div>
-              <p className="text-muted-foreground leading-relaxed italic border-t pt-6">
-                Guided by the core values of integrity, innovation, and excellence, the Jindal Group continues to contribute to nation-building through advanced manufacturing, infrastructure development, and employment generation.
-              </p>
+
+
             </div>
           </div>
         </ScrollFadeIn>
         <ScrollFadeIn delay={200}>
-          <img src={companyImg} alt="Company headquarters" loading="lazy" width={640} height={400} className="rounded-lg w-full h-96 object-contain bg-white shadow-lg" />
+          <AboutSlider />
         </ScrollFadeIn>
       </div>
     </section>

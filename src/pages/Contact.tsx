@@ -4,8 +4,10 @@ import { Phone, Mail, MapPin, Clock, Globe, Send } from "lucide-react";
 
 const contactInfo = [
   { icon: MapPin, title: "Address", lines: ["Delhi", "India"] },
-  { icon: Phone, title: "Phone", lines: ["+91-9999404852"] },
-  { icon: Mail, title: "Email", lines: ["info@jindalsteeltube.com"] },
+
+  { icon: Phone, title: "Phone", lines: ["+91-9664119210", "+91-7982528486"] },
+
+  { icon: Mail, title: "Email", lines: ["akash.1401m@gmail.com"] },
   { icon: Clock, title: "Working Hours", lines: ["Mon - Sat: 9:00 AM - 6:00 PM", "Sunday: Closed"] },
 ];
 
@@ -71,8 +73,9 @@ const Contact = () => (
                   </div>
                   <div>
                     <p className="font-semibold text-sm mb-1 uppercase tracking-wide">Call Us</p>
-                    <p className="text-sm text-muted-foreground">+91-9999404852</p>
+                    <p className="text-sm text-muted-foreground">+91-9664119210, +91-7982528486</p>
                   </div>
+
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0 border border-primary/20">
@@ -80,7 +83,7 @@ const Contact = () => (
                   </div>
                   <div>
                     <p className="font-semibold text-sm mb-1 uppercase tracking-wide">Email Us</p>
-                    <p className="text-sm text-muted-foreground">info@jindalsteeltube.com</p>
+                    <p className="text-sm text-muted-foreground">akash.1401m@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
