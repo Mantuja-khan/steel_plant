@@ -85,7 +85,7 @@ const Footer = () => (
       </div>
     </div>
 
-    <div className="container mx-auto px-4 mt-16 pt-8 border-t border-white/10 flex flex-col md:row justify-between items-center gap-4 text-xs text-primary-foreground/40">
+    <div className="container mx-auto px-4 mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-primary-foreground/40">
       <p>© {new Date().getFullYear()} D.S. Steels. All rights reserved.</p>
     </div>
   </footer>
