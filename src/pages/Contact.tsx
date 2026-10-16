@@ -13,7 +13,7 @@ const contactInfo = [
 
 const Contact = () => (
   <>
-    <PageBanner title="Contact Us" subtitle="We'd Love to Hear From You" />
+  <PageBanner title="Contact Us" subtitle="We'd Love to Hear From You" />
 
     <section className="section-padding">
       <div className="container mx-auto px-4">

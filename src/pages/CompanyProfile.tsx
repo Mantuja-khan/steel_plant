@@ -9,8 +9,9 @@ const values = [
   { icon: Award, title: "Our Quality", desc: "Our plant & processes are ISO : 9001 : 2000 certified, ensuring international standards for elite clients." },
   { icon: Users, title: "Our Technocrats", desc: "Managed by a team of experienced technocrats with extensive expertise in the steel tube industry." },
 ];
-
+ 
 const CompanyProfile = () => (
+
   <>
     <PageBanner title="Company Profile" subtitle="About Our Company" />
 
